@@ -25,8 +25,8 @@ jobs:
     - name: Copy 
       run: |
         mkdir -p Tool/GeoIP
-        curl -L -o Tool-repo/GeoIP/CN_Country.mmdb "https://raw.githubusercontent.com/Masaiki/GeoIP2-CN/release/Country.mmdb"
-        curl -L -o Tool-repo/GeoIP/Global_Country.mmdb "https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country.mmdb"
+        curl -L -o Tool-repo/GeoIP/ASN.mmdb "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb"
+        curl -L -o Tool-repo/GeoIP/Country.mmdb "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country.mmdb"
      
 ###### Clash
 
@@ -49,7 +49,7 @@ jobs:
         curl -L -o Tool-repo/Clash/Rules/PayPal.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PayPal/PayPal.list"
         # 国内规则 
         curl -L -o Tool-repo/Clash/Rules/ChinaMax.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax.list"
-        curl -L -o Tool-repo/Clash/Rules/ChinaASN.list "https://raw.githubusercontent.com/missuo/ASN-China/main/ASN.China.list"
+        curl -L -o Tool-repo/Clash/Rules/ChinaASN.list "https://raw.githubusercontent.com/ForestL18/ASN/main/China-ASN.list"
         # Global
         curl -L -o Tool-repo/Clash/Rules/Global.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global.list"
         # 广告规则 
@@ -98,21 +98,6 @@ jobs:
             echo "$file not found."
           fi
         done
-
-      #  Clash 规则转换 yaml 为 text
-      #    - name: Edit Clash/Rules yaml to text
-      #      run: |
-      #        cd Tool-repo/Clash/Rules
-      #        for file in Anti-ad.list ; do
-      #          if [ -f "$file" ]; then
-      #            # 删除payload
-      #            sed -i 's/payload://g' "$file"
-      #            # 删除 - 号和单引号
-      #            sed -i -e 's/#  - /# /g' -e 's/  # - /# /g' -e 's/  - //g' -e "s/'//g" "$file"
-      #          else
-      #            echo "$file not found."
-      #          fi
-      #        done
 
       # 去重排序
     - name: Remove duplicates and lines 
