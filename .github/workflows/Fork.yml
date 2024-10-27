@@ -67,10 +67,6 @@ jobs:
           if [ "$file" != "ChinaIPv4.list" ] && [ "$file" != "ChinaIPv6.list" ] && [ "$file" != "Lan.list" ]; then
             sed -i -e 's/, /,/g' \
                    -e 's/;/# /g' \
-                   -e 's/^DOMAIN,/full:/'
-                   -e 's/^DOMAIN-SUFFIX,//'
-                   -e 's/^DOMAIN-KEYWORD,/keyword:/'
-                   -e 's/^DOMAIN-REGEX,/regexp:/'
                    -e 's/host,/HOST,/g' \
                    -e 's/host-/HOST-/g' \
                    -e 's/-suffix/-SUFFIX/g' \
