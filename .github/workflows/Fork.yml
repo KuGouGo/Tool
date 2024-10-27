@@ -81,7 +81,6 @@ jobs:
                    -e 's/,reject$//g' \
                    -e 's/,direct$//g' \
                    -e 's/,extended-matching$//g' \
-                   -e '/\(OR\|AND\|NOT\|USER-AGENT\|URL-REGEX\|IP-ASN\),/ s/^/#/' \
                    -e '/# 内容：/d' \
                    -e '/# 数量：/d' \
                    -e '/# 更新：/d' \
