@@ -238,6 +238,10 @@ DOMAIN-SUFFIX,ouonet.org
 ##### P #####
 
 # PiliPili
+DOMAIN-SUFFIX,emby77.cf
+DOMAIN-SUFFIX,emby77.org
+DOMAIN-SUFFIX,pilipiliultra.top
+DOMAIN-SUFFIX,pilipiliultra.com
 DOMAIN-SUFFIX,pilipili.club
 
 # PornEmby
@@ -295,7 +299,8 @@ DOMAIN,cminf.sfcat.link
 DOMAIN,cuinf.sfcat.link
 
 # 守候网络Emby
-DOMAIN-SUFFIX,cn2gias.uk
+DOMAIN-SUFFIX,emby.cn2gias.uk
+DOMAIN-SUFFIX,post.cn2gias.uk
 
 # SarCat
 DOMAIN-SUFFIX,starcat.eu.org
