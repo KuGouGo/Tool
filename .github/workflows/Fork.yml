@@ -49,11 +49,15 @@ jobs:
         curl -L -o Tool-repo/Clash/Rules/PayPal.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/PayPal/PayPal.list"
         # 国内规则 
         curl -L -o Tool-repo/Clash/Rules/ChinaMax.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax.list"
-        curl -L -o Tool-repo/Clash/Rules/ChinaASN.list "https://raw.githubusercontent.com/ForestL18/ASN/main/China-ASN.list"
+        curl -L -o Tool-repo/Clash/Rules/ChinaASN.list "https://raw.githubusercontent.com/missuo/ASN-China/main/ASN.China.list"
+        # Global
+        curl -L -o Tool-repo/Surge/Rules/Global.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global.list"
         # 广告规则 
         curl -L -o Tool-repo/Clash/Rules/Anti-ad.list "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-surge.txt"
         # Lan
         curl -L -o Tool-repo/Clash/Rules/Lan.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.list"
+        # fakeip-filter
+        curl -L -o Tool-repo/Clash/Rules/fakeip-filter.list "https://raw.githubusercontent.com/juewuy/ShellCrash/dev/public/fake_ip_filter.list"
 
       # 适配规则
     - name: Edit Clash/Rules
@@ -135,24 +139,24 @@ jobs:
         # 流媒体
         cp -r Tool-repo/Clash/Rules/Emby.list Tool-repo/Loon/Rules/Emby.list
         # 苹果
-        curl -L -o Tool-repo/Loon/Rules/Apple.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.list"
+        curl -L -o Tool-repo/Loon/Rules/Apple.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Apple/Apple.list"
         # AIGC
         curl -L -o Tool-repo/Loon/Rules/AI.list "https://ruleset.skk.moe/List/non_ip/ai.conf"
         # 社交媒体
-        curl -L -o Tool-repo/Loon/Rules/Telegram.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.list"
+        curl -L -o Tool-repo/Loon/Rules/Telegram.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Telegram/Telegram.list"
         # 谷歌
-        curl -L -o Tool-repo/Loon/Rules/Google.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.list"
+        curl -L -o Tool-repo/Loon/Rules/Google.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Google/Google.list"
         # 微软
-        curl -L -o Tool-repo/Loon/Rules/Microsoft.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.list"
+        curl -L -o Tool-repo/Loon/Rules/Microsoft.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Microsoft/Microsoft.list"
         # PayPal
-        curl -L -o Tool-repo/Loon/Rules/PayPal.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/PayPal/PayPal.list"
+        curl -L -o Tool-repo/Loon/Rules/PayPal.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/PayPal/PayPal.list"
         # 国内规则 
-        curl -L -o Tool-repo/Loon/Rules/ChinaMax.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax.list"
-        curl -L -o Tool-repo/Loon/Rules/ChinaASN.list "https://raw.githubusercontent.com/ForestL18/ASN/main/China-ASN.list"
+        curl -L -o Tool-repo/Loon/Rules/ChinaMax.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/ChinaMax/ChinaMax.list"
+        curl -L -o Tool-repo/Loon/Rules/ChinaASN.list "https://raw.githubusercontent.com/missuo/ASN-China/main/ASN.China.list"
         # 广告规则 
         curl -L -o Tool-repo/Loon/Rules/Anti-ad.list "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-surge.txt"
         # Lan
-        curl -L -o Tool-repo/Loon/Rules/Lan.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.list"
+        curl -L -o Tool-repo/Loon/Rules/Lan.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Lan/Lan.list"
 
        # 适配规则
     - name: Edit Loon/Rules
