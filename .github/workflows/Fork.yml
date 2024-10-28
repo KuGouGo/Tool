@@ -90,8 +90,6 @@ jobs:
                    -e '/# UPDATED:/d' \
                    -e '/404: Not Found/d' \
                    "$file"
-          else
-            echo "$file not found."
           fi
         done
 
