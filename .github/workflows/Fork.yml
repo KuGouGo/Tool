@@ -114,7 +114,7 @@ jobs:
 
     - name: Copy Loon/Rules
       run: |
-         mkdir -p Tool/{Clash,Loon}/Rules
+        mkdir -p Tool/{Clash,Loon}/Rules
         # 流媒体
         cp -r Tool-repo/Clash/Rules/Emby.list Tool-repo/Loon/Rules/Emby.list
         # 苹果
