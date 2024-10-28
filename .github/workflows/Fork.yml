@@ -50,7 +50,7 @@ jobs:
         curl -L -o Tool-repo/Clash/Rules/CN.list "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.list"
         curl -L -o Tool-repo/Clash/Rules/ChinaASN.list "https://raw.githubusercontent.com/ForestL18/ASN/main/China-ASN.list"
         # Proxy
-        curl -L -o Tool-repo/Clash/Rules/Proxy.list "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/proxy.list"
+        curl -L -o Tool-repo/Clash/Rules/Proxy.list "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.list"
         # 广告规则 
         curl -L -o Tool-repo/Clash/Rules/Anti-ad.list "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-surge.txt"
         # Private
@@ -132,7 +132,7 @@ jobs:
         curl -L -o Tool-repo/Loon/Rules/CN.list "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.list"
         curl -L -o Tool-repo/Loon/Rules/ChinaASN.list "https://raw.githubusercontent.com/ForestL18/ASN/main/China-ASN.list"
         # Proxy
-        curl -L -o Tool-repo/Loon/Rules/Proxy.list "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/proxy.list"
+        curl -L -o Tool-repo/Loon/Rules/Proxy.list "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.list"
         # 广告规则 
         curl -L -o Tool-repo/Loon/Rules/Anti-ad.list "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-surge.txt"
         # Private
