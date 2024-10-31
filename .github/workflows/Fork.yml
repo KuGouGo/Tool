@@ -92,6 +92,17 @@ jobs:
         done
         rm -rf ./mihomo* ./Rules/ 
 
+    - name: Release and upload `clash-ruleset` assets
+      uses: svenstaro/upload-release-action@v2
+      with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          release_name: Rules
+          tag: Rules
+          overwrite: true
+          body: "Clash ruleset 规则集文件，包含 .yaml、.list 和 .mrs 格式"
+          file_glob: true
+          file: ./Rules/*
+          
 ###### Commit
     - name: Add and Commits
       run: |
