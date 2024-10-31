@@ -79,7 +79,7 @@ jobs:
 
     - name: Download and unzip `mihomo` core
       run: |
-        wget https://github.com/DustinWin/clash_singbox-tools/releases/download/mihomo/mihomo-alpha-linux-amd64.tar.gz -O - | tar -zxf - -C ./tools/
+        wget https://github.com/DustinWin/clash_singbox-tools/releases/download/mihomo/mihomo-alpha-linux-amd64.tar.gz -O - | tar -zxf - -C ./Rules/
         mv -f ./Rules/CrashCore ./Rules/mihomo
 
     - name: Generate `clash` rule-set (mrs)
