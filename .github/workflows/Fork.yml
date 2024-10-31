@@ -90,12 +90,7 @@ jobs:
         for ((i = 0; i < ${#list[@]}; i++)); do
           ./mihomo convert-ruleset domain text "./domains/${list[i]}/${list[i]}.list" ../Rules/${list[i]}.mrs
         done
-
-        list=($(ls ./ips/))
-        for ((i = 0; i < ${#list[@]}; i++)); do
-          ./mihomo convert-ruleset ipcidr text "./ips/${list[i]}/${list[i]}.list" ../Rules/${list[i]}.mrs
-        done
-        rm -rf ./mihomo* ./domains/ ./ips/
+        rm -rf ./mihomo* ./Rules/ 
 
 ###### Commit
     - name: Add and Commits
