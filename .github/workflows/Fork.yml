@@ -84,7 +84,7 @@ jobs:
 
     - name: Generate `clash` rule-set (mrs)
       run: |
-        cd ./tools/
+        cd ./Rules/
         chmod +x ./mihomo
         list=($(ls ./Rules/))
         for ((i = 0; i < ${#list[@]}; i++)); do
