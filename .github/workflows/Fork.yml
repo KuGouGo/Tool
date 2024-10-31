@@ -24,16 +24,16 @@ jobs:
       run: |
         mkdir -p Rules/{Clash,Loon}/Rules
         # 流媒体
-        cp -r Rules-repo/Loon/Rules/Emby.list Rules-repo/Clash/Rules/Emby.list
+        cp -r Rules-repo/Rules/Emby.list Rules-repo/Rules/Emby.list
         # AI
-        curl -L -o Rules-repo/Clash/Rules/AI.list "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/clash-ruleset/ai.list"
+        curl -L -o Rules-repo/Rules/AI.list "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/clash-ruleset/ai.list"
         # fakeip-filter
         curl -L -o Rules-repo/Clash/Rules/fakeip-filter.list "https://raw.githubusercontent.com/juewuy/ShellCrash/master/public/fake_ip_filter.list"
 
       # 适配规则
     - name: Edit Clash/Rules
       run: |
-        cd Rules-repo/Clash/Rules
+        cd Rules-repo/Rules
         for file in *.list; do
           if [ "$file" != "ChinaIPv4.list" ] && [ "$file" != "ChinaIPv6.list" ] && [ "$file" != "Lan.list" ]; then
             sed -i -e 's/, /,/g' \
