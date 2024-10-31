@@ -77,6 +77,26 @@ jobs:
         done
       shell: bash       
 
+    - name: Download and unzip `mihomo` core
+      run: |
+        wget https://github.com/DustinWin/clash_singbox-tools/releases/download/mihomo/mihomo-alpha-linux-amd64.tar.gz -O - | tar -zxf - -C ./tools/
+        mv -f ./tools/CrashCore ./tools/mihomo
+
+    - name: Generate `clash` rule-set (mrs)
+      run: |
+        cd ./tools/
+        chmod +x ./mihomo
+        list=($(ls ./Rules/))
+        for ((i = 0; i < ${#list[@]}; i++)); do
+          ./mihomo convert-ruleset domain text "./domains/${list[i]}/${list[i]}.list" ../Rules/${list[i]}.mrs
+        done
+
+        list=($(ls ./ips/))
+        for ((i = 0; i < ${#list[@]}; i++)); do
+          ./mihomo convert-ruleset ipcidr text "./ips/${list[i]}/${list[i]}.list" ../Rules/${list[i]}.mrs
+        done
+        rm -rf ./mihomo* ./domains/ ./ips/
+
 ###### Commit
     - name: Add and Commits
       run: |
